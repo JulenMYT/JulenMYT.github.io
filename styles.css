@@ -1,126 +1,184 @@
-﻿/* Corps de la page */
+﻿/* Style général du site */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
 }
 
-/* En-tête */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-    header .container {
-        width: 80%;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        margin: 0;
-    }
+/* En-tête du site */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
     header nav ul {
         list-style: none;
-        margin: 0;
         padding: 0;
-        display: flex;
+        margin: 10px 0;
     }
 
         header nav ul li {
-            margin-left: 1.5rem;
+            display: inline;
+            margin: 0 15px;
         }
 
             header nav ul li a {
-                color: #fff;
+                color: white;
                 text-decoration: none;
-                font-weight: bold;
+                font-size: 1.2rem;
             }
 
                 header nav ul li a:hover {
                     text-decoration: underline;
                 }
 
-/* Conteneur principal */
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 2rem 0;
+/* Section About Me */
+#about {
+    padding: 40px 0;
+    background-color: #ffffff;
 }
 
-/* Titres */
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
+    #about h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #about .intro-text {
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+/* Section Projects */
+#projects {
+    padding: 40px 0;
+    background-color: #f9f9f9;
 }
 
-/* Catégories */
+    #projects h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
 .category {
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
 }
 
-    .category h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+    .category h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
         color: #333;
-        text-align: left; /* Alignement du titre des catégories */
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-/* Grille des projets */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem; /* Espace entre les projets */
-}
-
-/* Projets individuels */
+/* Style pour chaque projet */
 .project {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 5px;
-    background: #fff;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
-
-    .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .project img {
-        max-width: 100%;
-        border-radius: 5px;
-        margin-bottom: 1rem;
-    }
 
     .project h4 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
     }
 
-    .project p {
-        font-size: 0.9rem;
-        color: #555;
+.project-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Section Contact */
+#contact {
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+    #contact h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
-/* Pied de page */
+    #contact form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #contact input, #contact textarea, #contact button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #contact button {
+        background-color: #333;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+        #contact button:hover {
+            background-color: #555;
+        }
+
+/* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
     footer p {
         margin: 0;
+        font-size: 1rem;
     }
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+}
