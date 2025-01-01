@@ -107,6 +107,7 @@ header {
     margin-bottom: 10px;
 }
 
+/* Style pour les images des projets */
 .project-image {
     width: 100%;
     max-width: 600px;
@@ -114,6 +115,13 @@ header {
     margin-top: 10px;
     border-radius: 8px;
 }
+
+    /* Cacher les images si elles échouent à se charger */
+    .project-image:not([src]),
+    .project-image[src=""],
+    .project-image:empty {
+        display: none;
+    }
 
 /* Style pour la section Contact */
 #contact {
@@ -150,7 +158,6 @@ header {
         background-color: darkred;
         text-decoration: underline; /* Souligner le texte lors du survol */
     }
-
 
 /* Footer */
 footer {
