@@ -20,6 +20,19 @@ header {
     text-align: center;
 }
 
+    /* Conteneur du logo et du titre dans l'en-tête */
+    header .header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        header .header-content img {
+            width: 50px; /* Ajuster la taille du logo */
+            height: auto;
+            margin-right: 15px; /* Espace entre le logo et le titre */
+        }
+
     header nav ul {
         list-style: none;
         padding: 0;
@@ -95,22 +108,27 @@ header {
     background-color: #ffffff;
 }
 
+/* Alignement du logo et du titre du projet */
 .project-header {
-    display: flex;
+    display: flex; /* Utiliser flexbox pour aligner logo et titre du projet */
     align-items: center;
     margin-bottom: 15px;
 }
 
 .project-logo {
-    max-width: 100px; /* Ajuste la largeur maximale à 150px */
-    height: auto; /* Conserve le ratio d'aspect de l'image */
-    margin-right: 10px; /* Ajoute un peu d'espace entre le logo et le titre du projet */
+    width: 75px; /* Taille du logo du projet */
+    height: auto;
+    margin-right: 15px; /* Espacement entre le logo et le titre du projet */
 }
-
 
 .project h4 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin: 0;
+}
+
+/* Ajouter cette règle pour cacher les logos manquants */
+.project-logo.hidden {
+    display: none;
 }
 
 .project-image {
@@ -137,6 +155,7 @@ header {
     flex-wrap: wrap;
 }
 
+/* Style pour chaque bouton */
 .social-button {
     display: block;
     background-color: red;
@@ -161,6 +180,9 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
     footer p {
@@ -182,8 +204,4 @@ footer {
     .project-image {
         max-width: 100%;
     }
-}
-
-.hidden {
-    display: none;
 }
