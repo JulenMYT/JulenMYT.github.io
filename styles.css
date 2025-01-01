@@ -1,5 +1,4 @@
-﻿/* Style général du site */
-body {
+﻿body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body {
     margin: 0 auto;
 }
 
-/* En-tête du site */
 header {
     background-color: #333;
     color: white;
@@ -20,7 +18,6 @@ header {
     text-align: center;
 }
 
-    /* Conteneur du logo et du titre dans l'en-tête */
     header .header-content {
         display: flex;
         justify-content: center;
@@ -28,9 +25,9 @@ header {
     }
 
         header .header-content img {
-            width: 50px; /* Ajuster la taille du logo */
+            width: 50px;
             height: auto;
-            margin-right: 15px; /* Espace entre le logo et le titre */
+            margin-right: 15px;
         }
 
     header nav ul {
@@ -54,7 +51,6 @@ header {
                     text-decoration: underline;
                 }
 
-/* Section About Me */
 #about {
     padding: 40px 0;
     background-color: #ffffff;
@@ -74,7 +70,6 @@ header {
         margin: 0 auto;
     }
 
-/* Section Projects */
 #projects {
     padding: 40px 0;
     background-color: #f9f9f9;
@@ -98,7 +93,6 @@ header {
         letter-spacing: 1px;
     }
 
-/* Style pour chaque projet */
 .project {
     margin-bottom: 20px;
     padding: 20px;
@@ -108,17 +102,16 @@ header {
     background-color: #ffffff;
 }
 
-/* Alignement du logo et du titre du projet */
 .project-header {
-    display: flex; /* Utiliser flexbox pour aligner logo et titre du projet */
+    display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
 .project-logo {
-    width: 75px; /* Taille du logo du projet */
+    width: 75px;
     height: auto;
-    margin-right: 15px; /* Espacement entre le logo et le titre du projet */
+    margin-right: 15px;
 }
 
 .project h4 {
@@ -126,7 +119,6 @@ header {
     margin: 0;
 }
 
-/* Ajouter cette règle pour cacher les logos manquants */
 .project-logo.hidden {
     display: none;
 }
@@ -138,14 +130,18 @@ header {
     border-radius: 8px;
 }
 
-/* Style pour la section Contact */
+.developed-info {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
 #contact {
     background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
 }
 
-/* Style pour le conteneur des boutons sociaux */
 .social-buttons {
     margin-top: 20px;
     display: flex;
@@ -154,7 +150,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* Style pour chaque bouton */
 .social-button {
     display: block;
     background-color: red;
@@ -173,7 +168,6 @@ header {
         text-decoration: underline;
     }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -189,7 +183,6 @@ footer {
         font-size: 1rem;
     }
 
-/* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
     .container {
         width: 95%;
