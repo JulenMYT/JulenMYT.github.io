@@ -1,445 +1,221 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mes Projets - Julen Montes</title>
+        <link rel="stylesheet" href="styles/project-card.css">
+        <link rel="stylesheet" href="styles/projets.css">
+        <link rel="stylesheet" href="styles/contact.css">
+        <link rel="stylesheet" href="styles/general.css">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
-    <style>
-        /* Reset de base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Mise en page globale */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            padding: 20px;
-        }
-
-        .home-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background-color: #ff9800;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-            .home-button:hover {
-                background-color: #ff7f00;
-                transform: scale(1.1);
-            }
-
-            .home-button i {
-                font-size: 24px;
-            }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #ffffff;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-            gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr; /* 1 colonne sur mobile */
-                padding: 0 20px;
-            }
-
-            .project-card {
-                width: 100%;
-            }
-        }
-
-        /* Styles des cartes */
-        .project-card {
-            display: inline-block;
-            max-width: 320px;
-            padding: 20px;
-            border: 1px solid #333;
-            border-radius: 10px;
-            background-color: #1e1e1e;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 100%;
-        }
-
-            .project-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
-                border-color: #ff9800;
-            }
-
-        .project-card-image {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 5px;
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        /* Informations supplémentaires sous les cartes */
-        .image-additional-info {
-            margin-top: 15px;
-            font-size: 0.9em;
-            color: #aaaaaa;
-            text-align: left;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-            .image-additional-info div {
-                display: flex;
-                align-items: center;
-                flex: 1 1 48%;
-            }
-
-            .image-additional-info i {
-                margin-right: 8px;
-                color: #ff9800;
-            }
-
-        .project-card-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin: 15px 0 10px;
-            color: #ff9800;
-        }
-
-        .project-card-description {
-            font-size: 1em;
-            color: #b0b0b0;
-            line-height: 1.4;
-        }
-    </style>
-
-</head>
-
-<body>
-    <button class="home-button" onclick="window.location.href = 'index.html';">
-        <i class="fa-solid fa-house"></i>
-    </button>
-    <h2>Projets</h2>
-    <main>
-
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/ShaderUnityScreen/image1.png" alt="Paysage en Shader">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 1 personne
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 5 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> Unity
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">Paysage en Shader</h3>
-                <p class="project-card-description">
-                    Une scène de paysage plat mettant en valeur des shaders personnalisés, avec de l'eau, des montagnes, des ombres et des effets d'éclairage.
-                </p>
-            </section>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <button class="home-button" onclick="window.location.href = 'index.html';" aria-label="Retour à l'accueil">
+            <i class="fa-solid fa-house"></i>
+        </button>        
+        <div class="header">
+            <h1 class="header-title">
+                Mes Projets
+            </h1>
         </div>
 
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/UIUnityScreen/image1.png" alt="UI jeu de cuisine">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 1 personne
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 10 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> Unity
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">UI jeu de cuisine</h3>
-                <p class="project-card-description">
-                    Un prototype de jeu de cuisine axé sur les mécaniques d'interface utilisateur, incluant l'interaction avec des objets, la gestion d'inventaire et les systèmes de conteneurs.
-                </p>
-            </section>
+        <div class="project-container" id="project-container">
+            <!-- Les projets seront générés ici -->
         </div>
 
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/Cisum/image1.jpg" alt="CISUM Logo">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 1 personne
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 10 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> Unity
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">CISUM - Jeu tour par tour</h3>
-                <p class="project-card-description">
-                    Un jeu au tour par tour inspiré de Earthbound, mettant en avant des mécaniques basées sur le timing.
-                </p>
-            </section>
+        <div class="social-buttons">
+            <a href="mailto:julenmontesytellez@gmail.com" class="social-button" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/JulenMYT" class="social-button" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://itch.io/profile/awakening15" class="social-button" title="Itch.io">
+                <i class="fab fa-itch-io"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/julen-montes-5aa54b341/" class="social-button" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
 
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/ChessAI/image1.png" alt="IA d'Echec">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 2 personnes
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 10 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> SFML
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">IA d'Echec</h3>
-                <p class="project-card-description">
-                    Une IA de jeu d'échecs avec une interface visuelle pour jouer contre l'ordinateur.
-                </p>
-            </section>
-        </div>
+        <script>
+            const projects = [
+                {
+                    title: "Attraction Flow",
+                    image: "screen/AttractionFlow/image1.png",
+                    teamSize: 3,
+                    time: "2 jours",
+                    engine: "Unity",
+                    year: 2025,
+                    description: "GAME JAM. Jeu mobile hyper casual de gestion de file d'attente de parc d'attraction.",
+                    isGold: true,
+                    detailPage: "project-details/attraction-flow.html"
+                }, 
+                {
+                    title: "Kitchen UI",
+                    image: "screen/UIUnityScreen/image1.png",
+                    teamSize: 1,
+                    time: "10 jours",
+                    engine: "Unity",
+                    year: 2024,
+                    description: "UI de jeu de cuisine.",
+                    isGold: false,
+                    detailPage: "project-details/kitchen-ui.html"
+                },    
+                {
+                    title: "World Shader",
+                    image: "screen/ShaderUnityScreen/image1.png",
+                    teamSize: 1,
+                    time: "5 jours",
+                    engine: "Unity",
+                    year: 2024,
+                    description: "Paysage sur Unity entièrement réalisé en shader avec shader graph.",
+                    isGold: false,
+                    detailPage: "project-details/world-shader.html"
+                },
+                {
+                    title: "Cisum",
+                    image: "screen/Cisum/image1.jpg",
+                    teamSize: 1,
+                    time: "10 jours",
+                    engine: "Unity",
+                    year: 2024,
+                    description: "Battle system inspiré par Mother 3, avec mécanique de rythme avec la musique et système de niveau.",
+                    isGold: true,
+                    detailPage: "project-details/cisum.html"
+                },
+                {
+                    title: "IA d'Echecs",
+                    image: "screen/ChessAI/image1.png",
+                    teamSize: 2,
+                    time: "10 jours",
+                    engine: "SFML",
+                    year: 2024,
+                    description: "IA d'échec simple avec interface graphique.",
+                    isGold: false,
+                    detailPage: "project-details/chess.html"
+                },
+                {
+                    title: "Librairie Parsing",
+                    image: "screen/LibrairieParsingSMLF/image1.png",
+                    teamSize: 2,
+                    time: "5 jours",
+                    engine: "SFML",
+                    year: 2024,
+                    description: "Librairie de sauvegarde et chargement de fichier .ini",
+                    isGold: false,
+                    detailPage: "project-details/parsing.html"
+                },
+                {
+                    title: "IA State Machine",
+                    image: "screen/StateMachine/image1.png",
+                    teamSize: 2,
+                    time: "10 jours",
+                    engine: "SFML",
+                    year: 2024,
+                    description: "State Machine d'une IA simple.",
+                    isGold: false,
+                    detailPage: "project-details/state-machine.html"
+                },
+                {
+                    title: "Seasons",
+                    image: "screen/SeasonsUnity/image1.png",
+                    teamSize: 2,
+                    time: "30 jours",
+                    engine: "Unity",
+                    year: 2024,
+                    description: "Jeu de puzzle inspiré de Oracle of Seasons autour des saisons.",
+                    isGold: true,
+                    detailPage: "project-details/seasons.html"
+                },
+                {
+                    title: "Football Game",
+                    image: "screen/BallGame/image1.png",
+                    teamSize: 3,
+                    time: "10 jours",
+                    engine: "Unity",
+                    year: 2024,
+                    description: "Jeu de football avec obstacles en multijoueur local.",
+                    isGold: false,
+                    detailPage: "project-details/ball-game.html"
+                },
+                {
+                    title: "RPG ASCII",
+                    image: "screen/ASCII/image1.png",
+                    teamSize: 3,
+                    time: "5 jours",
+                    engine: "Développement C#",
+                    year: 2024,
+                    description: "RPG en ASCII avec systeme de combat, quête, sauvegarde et inventaire.",
+                    isGold: false,
+                    detailPage: "project-details/ascii.html"
+                },
+                {
+                    title: "Seasons",
+                    image: "screen/SeasonsSFML/image1.png",
+                    teamSize: 3,
+                    time: "15 jours",
+                    engine: "SFML",
+                    year: 2023,
+                    description: "Jeu de puzzle inspiré de Oracle of Seasons autour des saisons.",
+                    isGold: false,
+                    detailPage: "project-details/seasons-sfml.html"
+                },
+                {
+                    title: "Ecospace",
+                    image: "screen/Ecospace/image1.png",
+                    teamSize: 3,
+                    time: "10 jours",
+                    engine: "SFML",
+                    year: 2023,
+                    description: "Jeu de jardin inspiré par Viva Piñata avec journal.",
+                    isGold: false,
+                    detailPage: "project-details/ecospace.html"
+                },
+            ];
+    
+            const projectContainer = document.getElementById("project-container");
+    
+            projects.forEach(project => {
+                const projectCard = document.createElement("div");
+                projectCard.classList.add("project-card");
 
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/LibrairieParsingSFML/image1.png" alt="Librairie de sauvegarde">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 2 personnes
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 5 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> SFML
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">Librairie de sauvegarde</h3>
-                <p class="project-card-description">
-                    Une petite bibliothèque pour sauvegarder et charger les données de l'inventaire à l'aide de fichiers .ini.
-                </p>
-            </section>
-        </div>
+                if (project.isGold) {
+                    projectCard.classList.add("gold");
+                }
 
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/StateMachine/image1.png" alt="State Machine">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 1 personne
+                projectCard.innerHTML = `
+                <a href="${project.detailPage}" target="_blank" class="project-link">
+                    <div class="img-container">
+                        <img class="image" src="${project.image}" alt="${project.title}">
                     </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 5 jours
+                    <div class="stats">
+                        <div class="team-size">
+                            <i class="fa-solid fa-users"></i> ${project.teamSize}
+                        </div>
+                        <div class="time">
+                            <i class="fa-solid fa-clock"></i> ${project.time}
+                        </div>
+                        <div class="water-mark">
+                            <i class="fa-solid fa-screwdriver-wrench"></i> ${project.engine}
+                        </div>
+                        <div class="year">
+                            <i class="fa-solid fa-calendar"></i> ${project.year}
+                        </div>
                     </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> SFML
+                    <div class="title">
+                        <h2>${project.title}</h2>
                     </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
+                    <div class="description">
+                        <p>${project.description}</p>
                     </div>
-                </div>
-                <h3 class="project-card-title">State Machine</h3>
-                <p class="project-card-description">
-                    Une démonstration de machine à états utilisant des carrés pour illustrer différents comportements.
-                </p>
-            </section>
-        </div>
-
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/SeasonsUnity/image1.png" alt="SEASONS - Puzzle Game 2D">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 2 personnes
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 2 mois
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> Unity
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">SEASONS - Puzzle Game 2D</h3>
-                <p class="project-card-description">
-                    Un jeu de puzzle en pixel-art basé sur des pouvoirs saisonniers qui affectent le gameplay, remake d'un projet SFML.
-                </p>
-            </section>
-        </div>
-
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/BallGame/image1.png" alt="Ball Game">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 3 personnes
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i>  10 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> Unity
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">Football Game</h3>
-                <p class="project-card-description">
-                    Premier projet Unity, un jeu de football avec génération de terrain aléatoire.
-                </p>
-            </section>
-        </div>
-
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/RPGASCII/image1.png" alt="ASCII RPG">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 4 personnes
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i>  5 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> Console
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2024
-                    </div>
-                </div>
-                <h3 class="project-card-title">RPG ASCII</h3>
-                <p class="project-card-description">
-                    Premier projet C#, un RPG en ASCII avec systeme de quête et de sauvegarde.
-                </p>
-            </section>
-        </div>
-
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/SeasonsSFML/image1.png" alt="SEASONS - Puzzle Game 2D">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 4 personnes
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i>  3 semaines
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> SFML
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2023
-                    </div>
-                </div>
-                <h3 class="project-card-title">SEASONS - Puzzle Game 2D</h3>
-                <p class="project-card-description">
-                    Un jeu de puzzle en pixel-art basé sur des pouvoirs saisonniers qui affectent le gameplay.
-                </p>
-            </section>
-        </div>
-
-        <div class="project-card">
-            <section>
-                <div class="project-card-image">
-                    <img src="ScreenPortfolio/Ecospace/image1.png" alt="Ecospace">
-                </div>
-                <div class="image-additional-info">
-                    <div class="team-size">
-                        <i class="fa-solid fa-users"></i> 4 personnes
-                    </div>
-                    <div class="time">
-                        <i class="fa-solid fa-clock"></i> 10 jours
-                    </div>
-                    <div class="water-mark">
-                        <i class="fa-solid fa-screwdriver-wrench"></i> SFML
-                    </div>
-                    <div class="year">
-                        <i class="fa-solid fa-calendar"></i> 2023
-                    </div>
-                </div>
-                <h3 class="project-card-title">Ecospace - 2D Garden Game</h3>
-                <p class="project-card-description">
-                    Un jeu inspiré par Stardew Valley et Viva Piñata dans lequel on note nos découvertes dans un journal.
-                </p>
-            </section>
-        </div>
-    </main>
-
-</body>
+                </a>
+                `;
+    
+                projectContainer.appendChild(projectCard);
+            });
+        </script>
+    </body>
 </html>

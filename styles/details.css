@@ -1,0 +1,129 @@
+/* Project Detail Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Utilisation d'un fond sombre similaire aux autres pages */
+    color: white; /* Texte en blanc pour contraster avec le fond sombre */
+}
+
+header {
+    background-color: #1f1f1f; /* Couleur de fond foncée similaire à l'en-tête des autres pages */
+    padding: 20px;
+    color: white;
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    max-height: 600px;
+    margin: 0 auto;
+    background-color: #1b1b1b; /* Fond sombre, mais un peu plus clair pour les sections du projet */
+    box-shadow: 0px 0px 10px rgba(255, 157, 0, 0.3); /* Ombre orange pour correspondre à l'esthétique */
+    border-radius: 8px; /* Légère arrondi pour un effet moderne */
+}
+
+.project-image {
+    width: 40%;
+    height: 100%; /* Prendre toute la hauteur disponible */
+    overflow: hidden; /* Cacher l'excédent de l'image */
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Couvre toute la zone sans être étirée */
+    object-position: center; /* Centrer l'image pour afficher la partie centrale */
+}
+
+.project-info {
+    padding: 20px;
+    width: 60%;
+}
+
+.project-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.project-meta div {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ddd; /* Texte secondaire en gris clair pour améliorer la lisibilité */
+}
+
+.project-description, .project-highlights, .project-links {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff6400; /* Utilisation d'une teinte orange pour les titres */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    color: #ddd; /* Texte secondaire dans une teinte plus claire */
+}
+
+a {
+    text-decoration: none;
+    color: #ff6400; /* Lien dans une couleur orange pour correspondre à l'esthétique */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff9800; /* Lien qui devient plus clair au survol */
+}
+
+.image-grid {
+    padding: 40px 20px;
+    background-color: #121212; /* Fond sombre pour correspondre au reste du site */
+    color: white;
+}
+
+.image-grid h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff6400; /* Orange pour le titre */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grille responsive */
+    gap: 20px;
+    justify-items: center;
+}
+
+.grid-item {
+    overflow: hidden;
+    border-radius: 8px; /* Coins arrondis pour un aspect moderne */
+    box-shadow: 0px 0px 10px rgba(255, 157, 0, 0.3); /* Ombre subtile */
+}
+
+.grid-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* L'image couvre toute la grille tout en maintenant ses proportions */
+    transition: transform 0.3s ease-in-out; /* Ajout d'une animation au survol */
+}
+
+.grid-img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}

@@ -1,0 +1,18 @@
+:root {
+    --orange: #ff9d00;
+    --dark-background: #121212;
+    --light-text: #ddd;
+    --card-background: #333;
+    --hover-background: #444;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .header-title {
+        font-size: 32px;
+    }
+}
