@@ -62,6 +62,61 @@ body {
         font-size: 24px;
     }
 
+    .filter-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        align-items: center; /* Centre verticalement tous les éléments */
+        justify-content: center; /* Centre horizontalement les éléments */
+    }
+    
+    .filter-container select {
+        padding: 12px 16px; /* Plus d'espace autour du texte */
+        border: 2px solid #ff9800; /* Bordure colorée */
+        border-radius: 8px; /* Coins arrondis */
+        background-color: #292929; /* Fond sombre */
+        color: #fff; /* Texte blanc */
+        font-size: 16px; /* Taille de police légèrement plus grande */
+        font-weight: 500; /* Poids de la police moyen */
+        transition: all 0.3s ease; /* Transition pour les interactions */
+        outline: none; /* Retirer l'outline par défaut */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Ombre discrète */
+    }
+    
+    .filter-container select:hover {
+        background-color: #1f1f1f; /* Changer la couleur de fond au survol */
+        border-color: #ff7f00; /* Bordure plus lumineuse au survol */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Ombre plus marquée au survol */
+    }
+    
+    .filter-container select:focus {
+        border-color: #ff9800; /* Garde la bordure colorée au focus */
+        box-shadow: 0 0 10px rgba(255, 152, 0, 0.6); /* Légère lueur autour du champ */
+    }
+    
+    .reset-button {
+        background: none;
+        border: none;
+        font-size: 24px; /* Taille de l'icône */
+        cursor: pointer;
+        color: #ff9800; /* Orange comme couleur principale pour rester cohérent avec le thème */
+        transition: color 0.3s ease, transform 0.3s ease; /* Transition pour les effets de survol */
+    }
+    
+    .reset-button:hover {
+        color: #ff7f00; /* Teinte d'orange plus foncée au survol */
+        transform: scale(1.1); /* Légère animation d'agrandissement au survol */
+    }
+    
+    .reset-button:focus {
+        outline: none;
+        color: #ffa500; /* Orange plus clair pour le focus */
+    }
+    
+    
+    
+
 @media (max-width: 1200px) {
     .project-container {
         grid-template-columns: repeat(2, 1fr);
