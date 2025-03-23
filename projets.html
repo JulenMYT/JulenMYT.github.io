@@ -14,7 +14,7 @@
     <body>
 
 
-
+        
         <button class="home-button" onclick="window.location.href = 'index.html';" aria-label="Retour à l'accueil">
             <i class="fa-solid fa-house"></i>
         </button>     
@@ -31,10 +31,12 @@
 
         <div class="filter-container">
             <select id="filter-date" aria-label="Filtrer par date">
-            <option value="">Filtrer par date</option>
-            <option value="asc">Ancien</option>
-            <option value="desc">Récent</option>
-        </select>
+                <option value="">Filtrer par date</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="cancel">Annuler</option> <!-- Option "Annuler" -->
+            </select>
             <select id="filter-engine" aria-label="Filtrer par moteur">
                 <option value="">Filtrer par moteur</option>
                 <option value="Unity">Unity</option>

@@ -174,7 +174,6 @@ projects.forEach(project => {
     projectContainer.appendChild(projectCard);
 });
 
-// Écouteurs d'événements pour les filtres
 document.getElementById('filter-date').addEventListener('change', handleFilterChange);
 document.getElementById('filter-engine').addEventListener('change', handleFilterChange);
 document.getElementById('filter-gold').addEventListener('change', handleFilterChange);
@@ -193,7 +192,6 @@ function handleFilterChange(event) {
     }
 }
 
-// Gestion du clic sur le bouton de réinitialisation des filtres
 document.getElementById('reset-filters').addEventListener('click', resetFilters);
 
 function resetFilters() {
@@ -212,19 +210,12 @@ function filterProjects() {
     const selectedGold = document.getElementById('filter-gold').value;
 
     const filteredProjects = projects.filter(project => {
-        const matchesDate = selectedDate ? project.year : true;
+        const matchesDate = selectedDate ? project.year == selectedDate : true;
         const matchesEngine = selectedEngine ? project.engine === selectedEngine : true;
         const matchesGold = selectedGold ? project.isGold.toString() === selectedGold : true;
 
         return matchesDate && matchesEngine && matchesGold;
     });
-
-    // Si le filtre par date est activé, on trie les projets
-    if (selectedDate === 'asc') {
-        filteredProjects.sort((a, b) => a.year - b.year);  // Tri croissant
-    } else if (selectedDate === 'desc') {
-        filteredProjects.sort((a, b) => b.year - a.year);  // Tri décroissant
-    }
 
     renderProjects(filteredProjects);
 }
