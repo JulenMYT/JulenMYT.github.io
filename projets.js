@@ -1,5 +1,16 @@
 const projects = [
     {
+        title: "Endless War",
+        image: "screen/unityLogo.png",
+        teamSize: 5,
+        time: "En cours",
+        engine: "Unity",
+        year: 2025,
+        description: "Jeu type survivor avec différentes classes et skill tree.",
+        isGold: true,
+        detailPage: "project-details/endlessWar.html"
+    }, 
+    {
         title: "Attraction Flow",
         image: "screen/AttractionFlow/image1.png",
         teamSize: 3,
@@ -9,6 +20,39 @@ const projects = [
         description: "GAME JAM. Jeu mobile hyper casual de gestion de file d'attente de parc d'attraction.",
         isGold: true,
         detailPage: "project-details/attraction-flow.html"
+    }, 
+    {
+        title: "Snowboard Game",
+        image: "screen/unrealLogo.png",
+        teamSize: 3,
+        time: "10 jours",
+        engine: "Unreal Engine",
+        year: 2025,
+        description: "Jeu de course en snowboard en blueprint",
+        isGold: false,
+        detailPage: "project-details/snowboard.html"
+    },
+    {
+        title: "Zombie Shooter",
+        image: "screen/unrealLogo.png",
+        teamSize: 2,
+        time: "10 jours",
+        engine: "Unreal Engine",
+        year: 2025,
+        description: "Shooter avec spawn de zombie en C++.",
+        isGold: false,
+        detailPage: "project-details/zombieShooter.html"
+    }, 
+    {
+        title: "Parc d'attraction",
+        image: "screen/unrealLogo.png",
+        teamSize: 1,
+        time: "10 jours",
+        engine: "Unreal Engine",
+        year: 2025,
+        description: "Mini-jeux de parc d'attraction, chamboule tout, auto-amponneuse en blueprint.",
+        isGold: false,
+        detailPage: "project-details/parcUnreal.html"
     }, 
     {
         title: "Kitchen UI",
